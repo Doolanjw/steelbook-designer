@@ -1140,6 +1140,641 @@
                 min-height: 400px;
             }
         }
+
+        /* ========== PHOTOSHOP/EDIT TAB STYLES ========== */
+        .edit-tab-highlight {
+            background: linear-gradient(135deg, #f97316, #ea580c) !important;
+        }
+
+        .edit-toolbar {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+            padding: 0.75rem;
+            background: var(--bg-tertiary);
+            border-radius: 8px;
+            border: 1px solid var(--border);
+        }
+
+        .edit-tool-btn {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 0.25rem;
+            padding: 0.5rem;
+            min-width: 60px;
+            background: var(--bg-input);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            color: var(--text-secondary);
+            font-size: 0.65rem;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .edit-tool-btn:hover {
+            background: var(--bg-secondary);
+            color: var(--text-primary);
+            border-color: var(--accent);
+        }
+
+        .edit-tool-btn.active {
+            background: var(--accent);
+            color: white;
+            border-color: var(--accent);
+        }
+
+        .edit-tool-btn svg {
+            width: 20px;
+            height: 20px;
+        }
+
+        .edit-tool-group {
+            display: flex;
+            gap: 0.25rem;
+            padding: 0.25rem;
+            background: var(--bg-input);
+            border-radius: 6px;
+            border: 1px solid var(--border);
+        }
+
+        .edit-tool-group .edit-tool-btn {
+            min-width: 44px;
+            border: none;
+            background: transparent;
+        }
+
+        .edit-tool-group .edit-tool-btn:hover {
+            background: var(--bg-tertiary);
+        }
+
+        .edit-tool-group .edit-tool-btn.active {
+            background: var(--accent);
+        }
+
+        .edit-panel-selector {
+            display: flex;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .edit-panel-btn {
+            flex: 1;
+            padding: 0.6rem;
+            background: var(--bg-input);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            color: var(--text-secondary);
+            font-size: 0.75rem;
+            cursor: pointer;
+            transition: all 0.2s;
+            text-align: center;
+        }
+
+        .edit-panel-btn:hover {
+            border-color: var(--accent);
+            color: var(--text-primary);
+        }
+
+        .edit-panel-btn.active {
+            background: var(--accent);
+            color: white;
+            border-color: var(--accent);
+        }
+
+        .edit-panel-btn.disabled {
+            opacity: 0.4;
+            cursor: not-allowed;
+        }
+
+        .edit-canvas-container {
+            position: relative;
+            background: #1a1a1a;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            overflow: hidden;
+            margin-bottom: 1rem;
+            min-height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .edit-canvas {
+            max-width: 100%;
+            max-height: 400px;
+            cursor: crosshair;
+        }
+
+        .edit-canvas-placeholder {
+            color: var(--text-secondary);
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .edit-slider-group {
+            margin-bottom: 0.75rem;
+        }
+
+        .edit-slider-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.25rem;
+        }
+
+        .edit-slider-label {
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+        }
+
+        .edit-slider-value {
+            font-size: 0.7rem;
+            color: var(--accent);
+            background: var(--bg-input);
+            padding: 0.15rem 0.4rem;
+            border-radius: 4px;
+        }
+
+        .edit-action-row {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            margin-bottom: 0.75rem;
+        }
+
+        .edit-action-btn {
+            flex: 1;
+            min-width: 80px;
+            padding: 0.5rem;
+            background: var(--bg-input);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            color: var(--text-primary);
+            font-size: 0.75rem;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.35rem;
+        }
+
+        .edit-action-btn:hover {
+            background: var(--bg-tertiary);
+            border-color: var(--accent);
+        }
+
+        .edit-action-btn.destructive:hover {
+            border-color: #ef4444;
+            color: #ef4444;
+        }
+
+        .edit-section {
+            background: var(--bg-input);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .edit-section-title {
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .brush-size-preview {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--bg-tertiary);
+            border: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 0.5rem;
+        }
+
+        .brush-size-dot {
+            border-radius: 50%;
+            background: var(--accent);
+        }
+
+        .color-picker-row {
+            display: flex;
+            gap: 0.5rem;
+            align-items: center;
+        }
+
+        .color-picker-row input[type="color"] {
+            width: 40px;
+            height: 40px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            padding: 0;
+        }
+
+        .color-picker-row input[type="text"] {
+            flex: 1;
+        }
+
+        .layer-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem;
+            background: var(--bg-tertiary);
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            margin-bottom: 0.5rem;
+            font-size: 0.75rem;
+        }
+
+        .layer-item.active {
+            border-color: var(--accent);
+            background: rgba(59, 130, 246, 0.1);
+        }
+
+        .layer-visibility {
+            cursor: pointer;
+            opacity: 0.7;
+        }
+
+        .layer-visibility:hover {
+            opacity: 1;
+        }
+
+        .layer-name {
+            flex: 1;
+        }
+
+        .layer-delete {
+            color: var(--text-secondary);
+            cursor: pointer;
+            padding: 0.25rem;
+        }
+
+        .layer-delete:hover {
+            color: #ef4444;
+        }
+
+        .undo-redo-bar {
+            display: flex;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .undo-redo-btn {
+            flex: 1;
+            padding: 0.5rem;
+            background: var(--bg-input);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            color: var(--text-primary);
+            font-size: 0.8rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.35rem;
+            transition: all 0.2s;
+        }
+
+        .undo-redo-btn:hover:not(:disabled) {
+            background: var(--bg-tertiary);
+            border-color: var(--accent);
+        }
+
+        .undo-redo-btn:disabled {
+            opacity: 0.4;
+            cursor: not-allowed;
+        }
+
+        /* Mobile touch improvements */
+        @media (max-width: 768px) {
+            .edit-tool-btn {
+                min-width: 50px;
+                padding: 0.4rem;
+            }
+            
+            .edit-toolbar {
+                padding: 0.5rem;
+            }
+            
+            .edit-canvas-container {
+                min-height: 250px;
+            }
+        }
+
+        /* ========== PROJECT MANAGER STYLES ========== */
+        .project-manager-btn {
+            background: linear-gradient(135deg, #10b981, #059669);
+            border: none;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            font-family: inherit;
+            font-size: 0.8rem;
+            font-weight: 500;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.2s;
+        }
+
+        .project-manager-btn:hover {
+            background: linear-gradient(135deg, #059669, #047857);
+            transform: translateY(-1px);
+        }
+
+        .project-modal {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+        }
+
+        .project-modal.active {
+            display: flex;
+        }
+
+        .project-modal-content {
+            background: var(--bg-panel);
+            border-radius: 12px;
+            width: 100%;
+            max-width: 900px;
+            max-height: 90vh;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid var(--border);
+        }
+
+        .project-modal-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1.25rem 1.5rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .project-modal-title {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.5rem;
+            letter-spacing: 0.05em;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .project-modal-close {
+            background: none;
+            border: none;
+            color: var(--text-secondary);
+            font-size: 1.5rem;
+            cursor: pointer;
+            padding: 0.25rem;
+            line-height: 1;
+        }
+
+        .project-modal-close:hover {
+            color: var(--text-primary);
+        }
+
+        .project-modal-body {
+            padding: 1.5rem;
+            overflow-y: auto;
+            flex: 1;
+        }
+
+        .project-save-section {
+            background: var(--bg-input);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .project-save-title {
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .project-save-row {
+            display: flex;
+            gap: 0.75rem;
+        }
+
+        .project-save-row input {
+            flex: 1;
+            padding: 0.6rem 0.75rem;
+            background: var(--bg-tertiary);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            color: var(--text-primary);
+            font-family: inherit;
+            font-size: 0.9rem;
+        }
+
+        .project-save-row input:focus {
+            outline: none;
+            border-color: var(--accent);
+        }
+
+        .project-save-btn {
+            background: var(--accent);
+            border: none;
+            color: white;
+            padding: 0.6rem 1.25rem;
+            border-radius: 6px;
+            font-family: inherit;
+            font-weight: 500;
+            cursor: pointer;
+            white-space: nowrap;
+        }
+
+        .project-save-btn:hover {
+            background: var(--accent-hover);
+        }
+
+        .project-library-title {
+            font-weight: 600;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .project-count {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            font-weight: 400;
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+
+        .project-card {
+            background: var(--bg-input);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            overflow: hidden;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .project-card:hover {
+            border-color: var(--accent);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .project-card-thumbnail {
+            width: 100%;
+            aspect-ratio: 16 / 10;
+            background: var(--bg-tertiary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .project-card-thumbnail img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .project-card-placeholder {
+            color: var(--text-secondary);
+            font-size: 2rem;
+        }
+
+        .project-card-info {
+            padding: 0.75rem;
+        }
+
+        .project-card-name {
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin-bottom: 0.25rem;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .project-card-date {
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+        }
+
+        .project-card-actions {
+            display: flex;
+            gap: 0.5rem;
+            padding: 0 0.75rem 0.75rem;
+        }
+
+        .project-card-btn {
+            flex: 1;
+            padding: 0.4rem;
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            background: var(--bg-tertiary);
+            color: var(--text-primary);
+            font-size: 0.7rem;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .project-card-btn:hover {
+            background: var(--bg-secondary);
+            border-color: var(--accent);
+        }
+
+        .project-card-btn.delete:hover {
+            border-color: #ef4444;
+            color: #ef4444;
+        }
+
+        .project-empty {
+            text-align: center;
+            padding: 3rem 1rem;
+            color: var(--text-secondary);
+        }
+
+        .project-empty-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            opacity: 0.5;
+        }
+
+        .project-empty-text {
+            margin-bottom: 0.5rem;
+        }
+
+        .project-import-section {
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--border);
+        }
+
+        .project-import-row {
+            display: flex;
+            gap: 0.75rem;
+            align-items: center;
+        }
+
+        .project-import-btn {
+            background: var(--bg-input);
+            border: 1px dashed var(--border);
+            color: var(--text-primary);
+            padding: 0.6rem 1rem;
+            border-radius: 6px;
+            font-family: inherit;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .project-import-btn:hover {
+            border-color: var(--accent);
+            background: var(--bg-tertiary);
+        }
+
+        @media (max-width: 768px) {
+            .project-grid {
+                grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            }
+            
+            .project-modal-content {
+                max-height: 95vh;
+            }
+            
+            .project-save-row {
+                flex-direction: column;
+            }
+        }
     </style>
 </head>
 <body>
@@ -1148,8 +1783,16 @@
             <div class="logo-icon"></div>
             STEELBOOK DESIGNER
         </div>
-        <div class="dimensions-badge">
-            G2 Standard: 136mm × 171.4mm | 300 DPI
+        <div style="display: flex; align-items: center; gap: 1rem;">
+            <button class="project-manager-btn" onclick="openProjectManager()">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/>
+                </svg>
+                My Projects
+            </button>
+            <div class="dimensions-badge">
+                G2 Standard: 136mm × 171.4mm | 300 DPI
+            </div>
         </div>
     </header>
 
@@ -1164,6 +1807,14 @@
                             <line x1="12" y1="3" x2="12" y2="15"/>
                         </svg>
                         Upload
+                    </button>
+                    <button class="tab-btn edit-tab-highlight" data-tab="edit" onclick="switchTab('edit')">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                            <circle cx="8.5" cy="8.5" r="1.5"/>
+                            <polyline points="21 15 16 10 5 21"/>
+                        </svg>
+                        ✏️ Edit
                     </button>
                     <button class="tab-btn ai-tab" data-tab="generate" onclick="switchTab('generate')">
                         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -1559,6 +2210,292 @@
                                 </a>
                             </div>
                         </div>
+                    </div>
+                </div>
+
+                <!-- EDIT TAB (Photoshop-style Tools) -->
+                <div class="tab-content" id="edit-tab">
+                    <!-- Panel Selector -->
+                    <div class="edit-section">
+                        <div class="edit-section-title">🖼️ Select Panel to Edit</div>
+                        <div class="edit-panel-selector">
+                            <button class="edit-panel-btn disabled" id="edit-btn-front" onclick="selectEditPanel('front')">Front</button>
+                            <button class="edit-panel-btn disabled" id="edit-btn-spine" onclick="selectEditPanel('spine')">Spine</button>
+                            <button class="edit-panel-btn disabled" id="edit-btn-back" onclick="selectEditPanel('back')">Back</button>
+                        </div>
+                    </div>
+
+                    <!-- Undo/Redo Bar -->
+                    <div class="undo-redo-bar">
+                        <button class="undo-redo-btn" id="undo-btn" onclick="undoEdit()" disabled>
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M3 7v6h6"/><path d="M21 17a9 9 0 0 0-9-9 9 9 0 0 0-6 2.3L3 13"/>
+                            </svg>
+                            Undo
+                        </button>
+                        <button class="undo-redo-btn" id="redo-btn" onclick="redoEdit()" disabled>
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 7v6h-6"/><path d="M3 17a9 9 0 0 1 9-9 9 9 0 0 1 6 2.3L21 13"/>
+                            </svg>
+                            Redo
+                        </button>
+                    </div>
+
+                    <!-- Edit Canvas Preview -->
+                    <div class="edit-canvas-container" id="edit-canvas-container">
+                        <canvas id="edit-canvas" class="edit-canvas" style="display: none;"></canvas>
+                        <div class="edit-canvas-placeholder" id="edit-placeholder">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="margin-bottom: 0.5rem; opacity: 0.5;">
+                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                                <circle cx="8.5" cy="8.5" r="1.5"/>
+                                <polyline points="21 15 16 10 5 21"/>
+                            </svg>
+                            <p style="margin-bottom: 0.25rem; font-weight: 500;">No Image Selected</p>
+                            <p style="font-size: 0.75rem; opacity: 0.7;">Upload an image in the Upload tab first,<br>then select a panel above to edit.</p>
+                        </div>
+                    </div>
+
+                    <!-- TRANSFORM TOOLS -->
+                    <div class="edit-section">
+                        <div class="edit-section-title">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/>
+                                <line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/>
+                            </svg>
+                            Transform
+                        </div>
+                        <div class="edit-action-row">
+                            <button class="edit-action-btn" onclick="rotateImage(90)" title="Rotate 90° Clockwise">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M21 2v6h-6"/><path d="M21 13a9 9 0 1 1-3-7.7L21 8"/>
+                                </svg>
+                                90° CW
+                            </button>
+                            <button class="edit-action-btn" onclick="rotateImage(-90)" title="Rotate 90° Counter-Clockwise">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M3 2v6h6"/><path d="M3 13a9 9 0 1 0 3-7.7L3 8"/>
+                                </svg>
+                                90° CCW
+                            </button>
+                            <button class="edit-action-btn" onclick="rotateImage(180)" title="Rotate 180°">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M21 12a9 9 0 1 1-6.219-8.56"/>
+                                </svg>
+                                180°
+                            </button>
+                        </div>
+                        <div class="edit-action-row">
+                            <button class="edit-action-btn" onclick="flipImage('horizontal')" title="Flip Horizontal">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M8 3H5a2 2 0 0 0-2 2v14c0 1.1.9 2 2 2h3"/>
+                                    <path d="M16 3h3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-3"/>
+                                    <line x1="12" y1="3" x2="12" y2="21"/>
+                                </svg>
+                                Flip H
+                            </button>
+                            <button class="edit-action-btn" onclick="flipImage('vertical')" title="Flip Vertical">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M3 8V5a2 2 0 0 1 2-2h14c1.1 0 2 .9 2 2v3"/>
+                                    <path d="M3 16v3a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-3"/>
+                                    <line x1="3" y1="12" x2="21" y2="12"/>
+                                </svg>
+                                Flip V
+                            </button>
+                            <button class="edit-action-btn" onclick="openCropModalForEdit()" title="Crop Image">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M6 2v14a2 2 0 0 0 2 2h14"/>
+                                    <path d="M18 22V8a2 2 0 0 0-2-2H2"/>
+                                </svg>
+                                Crop
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- BLUR & SHARPEN -->
+                    <div class="edit-section">
+                        <div class="edit-section-title">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/>
+                            </svg>
+                            Blur & Sharpen
+                        </div>
+                        <div class="edit-slider-group">
+                            <div class="edit-slider-header">
+                                <span class="edit-slider-label">Blur</span>
+                                <span class="edit-slider-value" id="edit-blur-value">0</span>
+                            </div>
+                            <input type="range" id="edit-blur-slider" min="0" max="20" value="0" oninput="updateEditSliderValue('blur'); applyEditEffects()">
+                        </div>
+                        <div class="edit-slider-group">
+                            <div class="edit-slider-header">
+                                <span class="edit-slider-label">Sharpen</span>
+                                <span class="edit-slider-value" id="edit-sharpen-value">0</span>
+                            </div>
+                            <input type="range" id="edit-sharpen-slider" min="0" max="100" value="0" oninput="updateEditSliderValue('sharpen'); applyEditEffects()">
+                        </div>
+                    </div>
+
+                    <!-- NOISE REDUCTION -->
+                    <div class="edit-section">
+                        <div class="edit-section-title">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 3v18"/><path d="M8 7v10"/><path d="M16 7v10"/>
+                                <path d="M4 11v2"/><path d="M20 11v2"/>
+                            </svg>
+                            Noise & Grain
+                        </div>
+                        <div class="edit-slider-group">
+                            <div class="edit-slider-header">
+                                <span class="edit-slider-label">Noise Reduction</span>
+                                <span class="edit-slider-value" id="edit-denoise-value">0</span>
+                            </div>
+                            <input type="range" id="edit-denoise-slider" min="0" max="100" value="0" oninput="updateEditSliderValue('denoise'); applyEditEffects()">
+                        </div>
+                        <div class="edit-slider-group">
+                            <div class="edit-slider-header">
+                                <span class="edit-slider-label">Add Film Grain</span>
+                                <span class="edit-slider-value" id="edit-grain-value">0</span>
+                            </div>
+                            <input type="range" id="edit-grain-slider" min="0" max="50" value="0" oninput="updateEditSliderValue('grain'); applyEditEffects()">
+                        </div>
+                    </div>
+
+                    <!-- VIGNETTE -->
+                    <div class="edit-section">
+                        <div class="edit-section-title">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"/>
+                                <circle cx="12" cy="12" r="6"/>
+                                <circle cx="12" cy="12" r="2"/>
+                            </svg>
+                            Vignette
+                        </div>
+                        <div class="edit-slider-group">
+                            <div class="edit-slider-header">
+                                <span class="edit-slider-label">Vignette Strength</span>
+                                <span class="edit-slider-value" id="edit-vignette-value">0</span>
+                            </div>
+                            <input type="range" id="edit-vignette-slider" min="0" max="100" value="0" oninput="updateEditSliderValue('vignette'); applyEditEffects()">
+                        </div>
+                    </div>
+
+                    <!-- DRAWING TOOLS -->
+                    <div class="edit-section">
+                        <div class="edit-section-title">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 19l7-7 3 3-7 7-3-3z"/>
+                                <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/>
+                                <path d="M2 2l7.586 7.586"/>
+                            </svg>
+                            Drawing Tools
+                        </div>
+                        <div class="edit-toolbar">
+                            <button class="edit-tool-btn" id="tool-brush" onclick="selectDrawTool('brush')" title="Brush">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M18.37 2.63L14 7l-1.59-1.59a2 2 0 0 0-2.82 0L8 7l9 9 1.59-1.59a2 2 0 0 0 0-2.82L17 10l4.37-4.37a2.12 2.12 0 1 0-3-3Z"/>
+                                    <path d="M9 8c-2 3-4 3.5-7 4l8 10c2-1 6-5 6-7"/>
+                                </svg>
+                                Brush
+                            </button>
+                            <button class="edit-tool-btn" id="tool-eraser" onclick="selectDrawTool('eraser')" title="Eraser">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="m7 21-4.3-4.3c-1-1-1-2.5 0-3.4l9.6-9.6c1-1 2.5-1 3.4 0l5.6 5.6c1 1 1 2.5 0 3.4L13 21"/>
+                                    <path d="M22 21H7"/><path d="m5 11 9 9"/>
+                                </svg>
+                                Eraser
+                            </button>
+                            <button class="edit-tool-btn" id="tool-text" onclick="selectDrawTool('text')" title="Add Text">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="4 7 4 4 20 4 20 7"/>
+                                    <line x1="9" y1="20" x2="15" y2="20"/>
+                                    <line x1="12" y1="4" x2="12" y2="20"/>
+                                </svg>
+                                Text
+                            </button>
+                            <button class="edit-tool-btn" id="tool-line" onclick="selectDrawTool('line')" title="Draw Line">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <line x1="5" y1="19" x2="19" y2="5"/>
+                                </svg>
+                                Line
+                            </button>
+                            <button class="edit-tool-btn" id="tool-rect" onclick="selectDrawTool('rect')" title="Rectangle">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                                </svg>
+                                Rect
+                            </button>
+                            <button class="edit-tool-btn" id="tool-circle" onclick="selectDrawTool('circle')" title="Circle">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"/>
+                                </svg>
+                                Circle
+                            </button>
+                        </div>
+
+                        <!-- Brush Settings -->
+                        <div id="brush-settings" style="display: none;">
+                            <div class="brush-size-preview">
+                                <div class="brush-size-dot" id="brush-size-dot" style="width: 10px; height: 10px;"></div>
+                            </div>
+                            <div class="edit-slider-group">
+                                <div class="edit-slider-header">
+                                    <span class="edit-slider-label">Brush Size</span>
+                                    <span class="edit-slider-value" id="brush-size-value">10</span>
+                                </div>
+                                <input type="range" id="brush-size-slider" min="1" max="100" value="10" oninput="updateBrushSize()">
+                            </div>
+                            <div class="edit-slider-group">
+                                <div class="edit-slider-header">
+                                    <span class="edit-slider-label">Opacity</span>
+                                    <span class="edit-slider-value" id="brush-opacity-value">100%</span>
+                                </div>
+                                <input type="range" id="brush-opacity-slider" min="1" max="100" value="100" oninput="updateBrushOpacity()">
+                            </div>
+                            <div class="color-picker-row">
+                                <input type="color" id="brush-color" value="#ffffff" onchange="updateBrushColor()">
+                                <input type="text" id="brush-color-hex" value="#ffffff" oninput="updateBrushColorFromHex()" placeholder="#ffffff">
+                            </div>
+                        </div>
+
+                        <!-- Text Settings -->
+                        <div id="text-settings" style="display: none; margin-top: 0.75rem;">
+                            <div class="text-input-group" style="margin-bottom: 0.5rem;">
+                                <label>Text to Add</label>
+                                <input type="text" id="draw-text-input" placeholder="Enter text..." value="">
+                            </div>
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem;">
+                                <div class="text-input-group">
+                                    <label>Font</label>
+                                    <select id="draw-text-font">
+                                        <option value="'Bebas Neue', sans-serif">Bebas Neue</option>
+                                        <option value="'Arial', sans-serif">Arial</option>
+                                        <option value="'Oswald', sans-serif">Oswald</option>
+                                        <option value="'Montserrat', sans-serif">Montserrat</option>
+                                        <option value="'Impact', sans-serif">Impact</option>
+                                        <option value="'Orbitron', sans-serif">Orbitron</option>
+                                    </select>
+                                </div>
+                                <div class="text-input-group">
+                                    <label>Size: <span id="draw-text-size-label">48</span>px</label>
+                                    <input type="range" id="draw-text-size" min="12" max="200" value="48" oninput="document.getElementById('draw-text-size-label').textContent = this.value">
+                                </div>
+                            </div>
+                            <div class="color-picker-row" style="margin-top: 0.5rem;">
+                                <input type="color" id="draw-text-color" value="#ffffff">
+                                <input type="text" id="draw-text-color-hex" value="#ffffff" placeholder="#ffffff">
+                            </div>
+                            <p class="help-text" style="margin-top: 0.5rem; font-size: 0.7rem;">Click on the canvas where you want to place the text.</p>
+                        </div>
+                    </div>
+
+                    <!-- APPLY/RESET BUTTONS -->
+                    <div style="display: flex; gap: 0.5rem; margin-top: 1rem;">
+                        <button class="btn btn-primary" onclick="applyAllEdits()" style="flex: 2;">
+                            ✓ Apply All Edits
+                        </button>
+                        <button class="btn btn-secondary destructive" onclick="resetAllEdits()" style="flex: 1;">
+                            ↺ Reset
+                        </button>
                     </div>
                 </div>
 
@@ -1966,6 +2903,31 @@
         let remixApiKey = '';
         let remixRefImage = null;
         let selectedStyle = null;
+
+        // Edit Tab State
+        let currentEditPanel = null;
+        let editCanvas = null;
+        let editCtx = null;
+        let editHistory = [];
+        let editHistoryIndex = -1;
+        let currentDrawTool = null;
+        let isDrawing = false;
+        let lastX = 0;
+        let lastY = 0;
+        let drawStartX = 0;
+        let drawStartY = 0;
+        let editEffects = {
+            blur: 0,
+            sharpen: 0,
+            denoise: 0,
+            grain: 0,
+            vignette: 0
+        };
+        let brushSettings = {
+            size: 10,
+            opacity: 100,
+            color: '#ffffff'
+        };
 
         const stylePresets = {
             cinematic: 'cinematic movie poster style, dramatic lighting, high contrast, professional film quality',
@@ -4752,6 +5714,1052 @@
             };
             reader.readAsDataURL(file);
         };
+
+        // ==========================================
+        // PROJECT MANAGER FUNCTIONS
+        // ==========================================
+        
+        const PROJECTS_STORAGE_KEY = 'steelbook-projects';
+
+        function openProjectManager() {
+            document.getElementById('project-modal').classList.add('active');
+            renderProjectLibrary();
+            
+            // Pre-fill project name if we have spine text
+            const spineText = document.getElementById('spine-design-text')?.value;
+            if (spineText && !document.getElementById('project-name-input').value) {
+                document.getElementById('project-name-input').value = spineText;
+            }
+        }
+
+        function closeProjectManager() {
+            document.getElementById('project-modal').classList.remove('active');
+        }
+
+        function getSavedProjects() {
+            try {
+                const data = localStorage.getItem(PROJECTS_STORAGE_KEY);
+                return data ? JSON.parse(data) : [];
+            } catch (e) {
+                console.error('Error loading projects:', e);
+                return [];
+            }
+        }
+
+        function saveProjects(projects) {
+            try {
+                localStorage.setItem(PROJECTS_STORAGE_KEY, JSON.stringify(projects));
+            } catch (e) {
+                console.error('Error saving projects:', e);
+                showToast('Error saving projects. Storage may be full.', 'error');
+            }
+        }
+
+        function generateProjectThumbnail() {
+            // Create a small thumbnail from the current preview
+            const previewCanvas = document.getElementById('preview-canvas');
+            if (!previewCanvas) return null;
+            
+            const thumbCanvas = document.createElement('canvas');
+            const thumbCtx = thumbCanvas.getContext('2d');
+            
+            // Create a small thumbnail (200px wide)
+            const scale = 200 / previewCanvas.width;
+            thumbCanvas.width = 200;
+            thumbCanvas.height = previewCanvas.height * scale;
+            
+            thumbCtx.drawImage(previewCanvas, 0, 0, thumbCanvas.width, thumbCanvas.height);
+            
+            return thumbCanvas.toDataURL('image/jpeg', 0.7);
+        }
+
+        function saveCurrentProject() {
+            const nameInput = document.getElementById('project-name-input');
+            const name = nameInput.value.trim();
+            
+            if (!name) {
+                showToast('Please enter a project name', 'error');
+                nameInput.focus();
+                return;
+            }
+            
+            // Check if we have any content
+            if (!images.front && !images.back && !images.spine) {
+                showToast('Nothing to save! Add some images first.', 'error');
+                return;
+            }
+            
+            // Create project data
+            const project = {
+                id: Date.now().toString(),
+                name: name,
+                createdAt: new Date().toISOString(),
+                updatedAt: new Date().toISOString(),
+                thumbnail: generateProjectThumbnail(),
+                data: {
+                    images: { ...images },
+                    originalImages: { ...originalImages },
+                    spineLogos: { ...spineLogos },
+                    spineDesign: {
+                        bgColor: document.getElementById('spine-bg-color')?.value || '#000000',
+                        text: document.getElementById('spine-design-text')?.value || '',
+                        font: document.getElementById('spine-font')?.value || "'Bebas Neue', sans-serif",
+                        textColor: document.getElementById('spine-text-color')?.value || '#ffffff',
+                        fontSize: document.getElementById('spine-font-size')?.value || 70
+                    },
+                    productionAssets: { ...productionAssets },
+                    imageAdjustments: { ...imageAdjustments }
+                }
+            };
+            
+            // Get existing projects and add new one
+            const projects = getSavedProjects();
+            
+            // Check for duplicate names
+            const existingIndex = projects.findIndex(p => p.name.toLowerCase() === name.toLowerCase());
+            if (existingIndex >= 0) {
+                if (confirm(`A project named "${name}" already exists. Do you want to replace it?`)) {
+                    projects[existingIndex] = { ...project, id: projects[existingIndex].id, createdAt: projects[existingIndex].createdAt };
+                } else {
+                    return;
+                }
+            } else {
+                projects.unshift(project); // Add to beginning
+            }
+            
+            saveProjects(projects);
+            renderProjectLibrary();
+            nameInput.value = '';
+            showToast(`Project "${name}" saved!`, 'success');
+        }
+
+        function renderProjectLibrary() {
+            const projects = getSavedProjects();
+            const grid = document.getElementById('project-grid');
+            const empty = document.getElementById('project-empty');
+            const count = document.getElementById('project-count');
+            
+            count.textContent = `(${projects.length} project${projects.length !== 1 ? 's' : ''})`;
+            
+            if (projects.length === 0) {
+                grid.style.display = 'none';
+                empty.style.display = 'block';
+                return;
+            }
+            
+            grid.style.display = 'grid';
+            empty.style.display = 'none';
+            
+            grid.innerHTML = projects.map(project => `
+                <div class="project-card" onclick="loadProject('${project.id}')">
+                    <div class="project-card-thumbnail">
+                        ${project.thumbnail 
+                            ? `<img src="${project.thumbnail}" alt="${project.name}">`
+                            : `<div class="project-card-placeholder">📀</div>`
+                        }
+                    </div>
+                    <div class="project-card-info">
+                        <div class="project-card-name">${escapeHtml(project.name)}</div>
+                        <div class="project-card-date">${formatDate(project.updatedAt)}</div>
+                    </div>
+                    <div class="project-card-actions">
+                        <button class="project-card-btn" onclick="event.stopPropagation(); loadProject('${project.id}')">📂 Open</button>
+                        <button class="project-card-btn" onclick="event.stopPropagation(); downloadProject('${project.id}')">💾 Export</button>
+                        <button class="project-card-btn delete" onclick="event.stopPropagation(); deleteProject('${project.id}')">🗑️</button>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function escapeHtml(str) {
+            const div = document.createElement('div');
+            div.textContent = str;
+            return div.innerHTML;
+        }
+
+        function formatDate(isoString) {
+            const date = new Date(isoString);
+            const now = new Date();
+            const diff = now - date;
+            
+            // Less than 24 hours ago
+            if (diff < 86400000) {
+                if (diff < 3600000) {
+                    const mins = Math.floor(diff / 60000);
+                    return mins <= 1 ? 'Just now' : `${mins} minutes ago`;
+                }
+                const hours = Math.floor(diff / 3600000);
+                return hours === 1 ? '1 hour ago' : `${hours} hours ago`;
+            }
+            
+            // Less than 7 days ago
+            if (diff < 604800000) {
+                const days = Math.floor(diff / 86400000);
+                return days === 1 ? 'Yesterday' : `${days} days ago`;
+            }
+            
+            // Otherwise show date
+            return date.toLocaleDateString();
+        }
+
+        function loadProject(projectId) {
+            const projects = getSavedProjects();
+            const project = projects.find(p => p.id === projectId);
+            
+            if (!project) {
+                showToast('Project not found', 'error');
+                return;
+            }
+            
+            // Confirm if current work exists
+            if (images.front || images.back || images.spine) {
+                if (!confirm('Loading this project will replace your current work. Continue?')) {
+                    return;
+                }
+            }
+            
+            // Restore project data
+            const data = project.data;
+            
+            // Restore images
+            images = { ...data.images };
+            originalImages = { ...data.originalImages } || { ...data.images };
+            spineLogos = { ...data.spineLogos } || { top: null, bottom: null };
+            
+            // Restore spine design
+            if (data.spineDesign) {
+                const sd = data.spineDesign;
+                if (document.getElementById('spine-bg-color')) document.getElementById('spine-bg-color').value = sd.bgColor || '#000000';
+                if (document.getElementById('spine-bg-hex')) document.getElementById('spine-bg-hex').value = sd.bgColor || '#000000';
+                if (document.getElementById('spine-design-text')) document.getElementById('spine-design-text').value = sd.text || '';
+                if (document.getElementById('spine-font')) document.getElementById('spine-font').value = sd.font || "'Bebas Neue', sans-serif";
+                if (document.getElementById('spine-text-color')) document.getElementById('spine-text-color').value = sd.textColor || '#ffffff';
+                if (document.getElementById('spine-font-size')) document.getElementById('spine-font-size').value = sd.fontSize || 70;
+                if (document.getElementById('spine-font-size-label')) document.getElementById('spine-font-size-label').textContent = sd.fontSize || 70;
+            }
+            
+            // Restore production assets
+            if (data.productionAssets) {
+                productionAssets = { ...data.productionAssets };
+                // Update UI checkboxes
+                const enabledCheckbox = document.getElementById('enable-production-assets');
+                if (enabledCheckbox) enabledCheckbox.checked = productionAssets.enabled;
+            }
+            
+            // Restore image adjustments
+            if (data.imageAdjustments) {
+                imageAdjustments = { ...data.imageAdjustments };
+            }
+            
+            // Update all upload zones with thumbnails
+            ['front', 'back', 'spine', 'insideLeft', 'insideRight'].forEach(panel => {
+                const zone = document.getElementById(`${panel}-zone`);
+                const badge = document.getElementById(`${panel}-badge`);
+                
+                if (zone && images[panel]) {
+                    zone.style.backgroundImage = `url(${images[panel]})`;
+                    zone.style.backgroundSize = 'cover';
+                    zone.style.backgroundPosition = 'center';
+                    if (badge) {
+                        badge.textContent = 'Loaded';
+                        badge.style.background = 'var(--success)';
+                        badge.style.color = 'white';
+                    }
+                } else if (zone) {
+                    zone.style.backgroundImage = '';
+                    if (badge) {
+                        badge.textContent = 'Empty';
+                        badge.style.background = '';
+                        badge.style.color = '';
+                    }
+                }
+            });
+            
+            // Update spine logos
+            if (spineLogos.top) {
+                const preview = document.getElementById('spine-logo-top-preview');
+                const placeholder = document.getElementById('spine-logo-top-placeholder');
+                const removeBtn = document.querySelector('#spine-logo-top-zone .remove-btn');
+                if (preview) { preview.src = spineLogos.top; preview.style.display = 'block'; }
+                if (placeholder) placeholder.style.display = 'none';
+                if (removeBtn) removeBtn.style.display = 'block';
+            }
+            if (spineLogos.bottom) {
+                const preview = document.getElementById('spine-logo-bottom-preview');
+                const placeholder = document.getElementById('spine-logo-bottom-placeholder');
+                const removeBtn = document.querySelector('#spine-logo-bottom-zone .remove-btn');
+                if (preview) { preview.src = spineLogos.bottom; preview.style.display = 'block'; }
+                if (placeholder) placeholder.style.display = 'none';
+                if (removeBtn) removeBtn.style.display = 'block';
+            }
+            
+            // Refresh preview
+            updatePreview();
+            
+            closeProjectManager();
+            showToast(`Project "${project.name}" loaded!`, 'success');
+        }
+
+        function deleteProject(projectId) {
+            const projects = getSavedProjects();
+            const project = projects.find(p => p.id === projectId);
+            
+            if (!project) return;
+            
+            if (confirm(`Are you sure you want to delete "${project.name}"? This cannot be undone.`)) {
+                const filtered = projects.filter(p => p.id !== projectId);
+                saveProjects(filtered);
+                renderProjectLibrary();
+                showToast(`Project "${project.name}" deleted`, 'info');
+            }
+        }
+
+        function downloadProject(projectId) {
+            const projects = getSavedProjects();
+            const project = projects.find(p => p.id === projectId);
+            
+            if (!project) {
+                showToast('Project not found', 'error');
+                return;
+            }
+            
+            // Create downloadable file
+            const exportData = {
+                version: '2.0',
+                type: 'steelbook-project',
+                ...project
+            };
+            
+            const blob = new Blob([JSON.stringify(exportData, null, 2)], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `${project.name.replace(/[^a-z0-9]/gi, '_')}.steelbook`;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+            
+            showToast(`Exported "${project.name}"`, 'success');
+        }
+
+        function exportCurrentProject() {
+            const nameInput = document.getElementById('project-name-input');
+            let name = nameInput.value.trim() || 'Untitled_SteelBook';
+            
+            // Create project data
+            const exportData = {
+                version: '2.0',
+                type: 'steelbook-project',
+                id: Date.now().toString(),
+                name: name,
+                createdAt: new Date().toISOString(),
+                updatedAt: new Date().toISOString(),
+                thumbnail: generateProjectThumbnail(),
+                data: {
+                    images: { ...images },
+                    originalImages: { ...originalImages },
+                    spineLogos: { ...spineLogos },
+                    spineDesign: {
+                        bgColor: document.getElementById('spine-bg-color')?.value || '#000000',
+                        text: document.getElementById('spine-design-text')?.value || '',
+                        font: document.getElementById('spine-font')?.value || "'Bebas Neue', sans-serif",
+                        textColor: document.getElementById('spine-text-color')?.value || '#ffffff',
+                        fontSize: document.getElementById('spine-font-size')?.value || 70
+                    },
+                    productionAssets: { ...productionAssets },
+                    imageAdjustments: { ...imageAdjustments }
+                }
+            };
+            
+            const blob = new Blob([JSON.stringify(exportData, null, 2)], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `${name.replace(/[^a-z0-9]/gi, '_')}.steelbook`;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+            
+            showToast(`Exported "${name}.steelbook"`, 'success');
+        }
+
+        function importProjectFile(input) {
+            const file = input.files[0];
+            if (!file) return;
+            
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                try {
+                    const data = JSON.parse(e.target.result);
+                    
+                    // Validate file format
+                    if (data.type !== 'steelbook-project' && !data.images) {
+                        throw new Error('Invalid file format');
+                    }
+                    
+                    // Handle both old format and new format
+                    let projectData;
+                    if (data.type === 'steelbook-project') {
+                        projectData = data;
+                    } else {
+                        // Old format - convert to new format
+                        projectData = {
+                            id: Date.now().toString(),
+                            name: file.name.replace('.steelbook', '').replace('.json', ''),
+                            createdAt: new Date().toISOString(),
+                            updatedAt: new Date().toISOString(),
+                            thumbnail: null,
+                            data: data
+                        };
+                    }
+                    
+                    // Add to saved projects
+                    const projects = getSavedProjects();
+                    
+                    // Check for duplicates
+                    const existingIndex = projects.findIndex(p => p.name.toLowerCase() === projectData.name.toLowerCase());
+                    if (existingIndex >= 0) {
+                        projectData.name = projectData.name + ' (Imported)';
+                    }
+                    
+                    projects.unshift(projectData);
+                    saveProjects(projects);
+                    renderProjectLibrary();
+                    
+                    showToast(`Imported "${projectData.name}"`, 'success');
+                    
+                    // Ask if user wants to open it now
+                    if (confirm(`Import successful! Would you like to open "${projectData.name}" now?`)) {
+                        loadProject(projectData.id);
+                    }
+                    
+                } catch (err) {
+                    console.error('Import error:', err);
+                    showToast('Invalid project file', 'error');
+                }
+            };
+            reader.readAsText(file);
+            
+            // Reset input
+            input.value = '';
+        }
+
+        // Close modal when clicking outside
+        document.addEventListener('click', function(e) {
+            const modal = document.getElementById('project-modal');
+            if (e.target === modal) {
+                closeProjectManager();
+            }
+        });
+
+        // Keyboard shortcut: Ctrl+S to save project
+        document.addEventListener('keydown', function(e) {
+            if ((e.ctrlKey || e.metaKey) && e.key === 's') {
+                e.preventDefault();
+                openProjectManager();
+                document.getElementById('project-name-input').focus();
+            }
+        });
+
+        // ==========================================
+        // EDIT TAB FUNCTIONS (Photoshop-style Tools)
+        // ==========================================
+
+        function initEditCanvas() {
+            editCanvas = document.getElementById('edit-canvas');
+            if (editCanvas) {
+                editCtx = editCanvas.getContext('2d');
+                
+                // Mouse events for drawing
+                editCanvas.addEventListener('mousedown', startDrawing);
+                editCanvas.addEventListener('mousemove', draw);
+                editCanvas.addEventListener('mouseup', stopDrawing);
+                editCanvas.addEventListener('mouseout', stopDrawing);
+                
+                // Touch events for mobile
+                editCanvas.addEventListener('touchstart', handleTouchStart, { passive: false });
+                editCanvas.addEventListener('touchmove', handleTouchMove, { passive: false });
+                editCanvas.addEventListener('touchend', stopDrawing);
+            }
+        }
+
+        function handleTouchStart(e) {
+            e.preventDefault();
+            const touch = e.touches[0];
+            const rect = editCanvas.getBoundingClientRect();
+            const x = touch.clientX - rect.left;
+            const y = touch.clientY - rect.top;
+            
+            isDrawing = true;
+            lastX = x;
+            lastY = y;
+            drawStartX = x;
+            drawStartY = y;
+        }
+
+        function handleTouchMove(e) {
+            e.preventDefault();
+            if (!isDrawing) return;
+            
+            const touch = e.touches[0];
+            const rect = editCanvas.getBoundingClientRect();
+            const x = touch.clientX - rect.left;
+            const y = touch.clientY - rect.top;
+            
+            if (currentDrawTool === 'brush' || currentDrawTool === 'eraser') {
+                drawBrushStroke(x, y);
+            }
+            
+            lastX = x;
+            lastY = y;
+        }
+
+        function updateEditPanelButtons() {
+            ['front', 'spine', 'back'].forEach(panel => {
+                const btn = document.getElementById(`edit-btn-${panel}`);
+                if (btn) {
+                    if (images[panel]) {
+                        btn.classList.remove('disabled');
+                    } else {
+                        btn.classList.add('disabled');
+                    }
+                }
+            });
+        }
+
+        function selectEditPanel(panel) {
+            if (!images[panel]) {
+                showToast(`No image in ${panel} panel. Upload one first!`, 'error');
+                return;
+            }
+            
+            currentEditPanel = panel;
+            
+            // Update button states
+            document.querySelectorAll('.edit-panel-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            document.getElementById(`edit-btn-${panel}`)?.classList.add('active');
+            
+            // Load image into edit canvas
+            loadImageToEditCanvas(images[panel]);
+            
+            // Reset effects
+            resetEditEffects();
+            
+            // Clear history for new panel
+            editHistory = [];
+            editHistoryIndex = -1;
+            updateUndoRedoButtons();
+        }
+
+        function loadImageToEditCanvas(imageSrc) {
+            if (!editCanvas) {
+                initEditCanvas();
+            }
+            
+            const img = new Image();
+            img.onload = function() {
+                // Set canvas size to match image (scaled for display)
+                const maxWidth = 340;
+                const maxHeight = 400;
+                let width = img.width;
+                let height = img.height;
+                
+                if (width > maxWidth) {
+                    height = height * (maxWidth / width);
+                    width = maxWidth;
+                }
+                if (height > maxHeight) {
+                    width = width * (maxHeight / height);
+                    height = maxHeight;
+                }
+                
+                editCanvas.width = width;
+                editCanvas.height = height;
+                editCanvas.style.display = 'block';
+                
+                document.getElementById('edit-placeholder').style.display = 'none';
+                
+                editCtx.drawImage(img, 0, 0, width, height);
+                
+                // Save initial state to history
+                saveEditState();
+            };
+            img.src = imageSrc;
+        }
+
+        function saveEditState() {
+            // Remove any states after current index (for redo functionality)
+            editHistory = editHistory.slice(0, editHistoryIndex + 1);
+            
+            // Save current canvas state
+            editHistory.push(editCanvas.toDataURL());
+            editHistoryIndex++;
+            
+            // Limit history to 20 states
+            if (editHistory.length > 20) {
+                editHistory.shift();
+                editHistoryIndex--;
+            }
+            
+            updateUndoRedoButtons();
+        }
+
+        function updateUndoRedoButtons() {
+            const undoBtn = document.getElementById('undo-btn');
+            const redoBtn = document.getElementById('redo-btn');
+            
+            if (undoBtn) {
+                undoBtn.disabled = editHistoryIndex <= 0;
+            }
+            if (redoBtn) {
+                redoBtn.disabled = editHistoryIndex >= editHistory.length - 1;
+            }
+        }
+
+        function undoEdit() {
+            if (editHistoryIndex > 0) {
+                editHistoryIndex--;
+                restoreEditState(editHistory[editHistoryIndex]);
+                updateUndoRedoButtons();
+            }
+        }
+
+        function redoEdit() {
+            if (editHistoryIndex < editHistory.length - 1) {
+                editHistoryIndex++;
+                restoreEditState(editHistory[editHistoryIndex]);
+                updateUndoRedoButtons();
+            }
+        }
+
+        function restoreEditState(dataUrl) {
+            const img = new Image();
+            img.onload = function() {
+                editCtx.clearRect(0, 0, editCanvas.width, editCanvas.height);
+                editCtx.drawImage(img, 0, 0);
+            };
+            img.src = dataUrl;
+        }
+
+        // Transform Functions
+        function rotateImage(degrees) {
+            if (!currentEditPanel || !editCanvas) {
+                showToast('Select a panel to edit first', 'error');
+                return;
+            }
+            
+            const tempCanvas = document.createElement('canvas');
+            const tempCtx = tempCanvas.getContext('2d');
+            
+            if (degrees === 90 || degrees === -90) {
+                tempCanvas.width = editCanvas.height;
+                tempCanvas.height = editCanvas.width;
+            } else {
+                tempCanvas.width = editCanvas.width;
+                tempCanvas.height = editCanvas.height;
+            }
+            
+            tempCtx.translate(tempCanvas.width / 2, tempCanvas.height / 2);
+            tempCtx.rotate((degrees * Math.PI) / 180);
+            tempCtx.drawImage(editCanvas, -editCanvas.width / 2, -editCanvas.height / 2);
+            
+            editCanvas.width = tempCanvas.width;
+            editCanvas.height = tempCanvas.height;
+            editCtx.drawImage(tempCanvas, 0, 0);
+            
+            saveEditState();
+            showToast(`Rotated ${degrees}°`, 'success');
+        }
+
+        function flipImage(direction) {
+            if (!currentEditPanel || !editCanvas) {
+                showToast('Select a panel to edit first', 'error');
+                return;
+            }
+            
+            const tempCanvas = document.createElement('canvas');
+            const tempCtx = tempCanvas.getContext('2d');
+            tempCanvas.width = editCanvas.width;
+            tempCanvas.height = editCanvas.height;
+            
+            if (direction === 'horizontal') {
+                tempCtx.translate(tempCanvas.width, 0);
+                tempCtx.scale(-1, 1);
+            } else {
+                tempCtx.translate(0, tempCanvas.height);
+                tempCtx.scale(1, -1);
+            }
+            
+            tempCtx.drawImage(editCanvas, 0, 0);
+            editCtx.clearRect(0, 0, editCanvas.width, editCanvas.height);
+            editCtx.drawImage(tempCanvas, 0, 0);
+            
+            saveEditState();
+            showToast(`Flipped ${direction}`, 'success');
+        }
+
+        function openCropModalForEdit() {
+            if (!currentEditPanel || !editCanvas) {
+                showToast('Select a panel to edit first', 'error');
+                return;
+            }
+            openCropModal(editCanvas.toDataURL(), currentEditPanel);
+        }
+
+        // Effect Sliders
+        function updateEditSliderValue(type) {
+            const slider = document.getElementById(`edit-${type}-slider`);
+            const valueEl = document.getElementById(`edit-${type}-value`);
+            if (slider && valueEl) {
+                valueEl.textContent = slider.value;
+                editEffects[type] = parseInt(slider.value);
+            }
+        }
+
+        function applyEditEffects() {
+            if (!currentEditPanel || !editCanvas || editHistoryIndex < 0) return;
+            
+            // Restore to base state before applying effects
+            const baseImage = new Image();
+            baseImage.onload = function() {
+                editCtx.clearRect(0, 0, editCanvas.width, editCanvas.height);
+                
+                // Build filter string
+                let filterStr = '';
+                if (editEffects.blur > 0) {
+                    filterStr += `blur(${editEffects.blur}px) `;
+                }
+                if (editEffects.sharpen > 0) {
+                    // Sharpen via contrast (simplified)
+                    filterStr += `contrast(${100 + editEffects.sharpen}%) `;
+                }
+                
+                editCtx.filter = filterStr.trim() || 'none';
+                editCtx.drawImage(baseImage, 0, 0);
+                editCtx.filter = 'none';
+                
+                // Apply vignette
+                if (editEffects.vignette > 0) {
+                    applyVignette(editEffects.vignette);
+                }
+                
+                // Apply grain
+                if (editEffects.grain > 0) {
+                    applyGrain(editEffects.grain);
+                }
+            };
+            baseImage.src = editHistory[0] || editCanvas.toDataURL();
+        }
+
+        function applyVignette(strength) {
+            const gradient = editCtx.createRadialGradient(
+                editCanvas.width / 2, editCanvas.height / 2, editCanvas.width * 0.2,
+                editCanvas.width / 2, editCanvas.height / 2, editCanvas.width * 0.7
+            );
+            gradient.addColorStop(0, 'rgba(0,0,0,0)');
+            gradient.addColorStop(1, `rgba(0,0,0,${strength / 100})`);
+            
+            editCtx.fillStyle = gradient;
+            editCtx.fillRect(0, 0, editCanvas.width, editCanvas.height);
+        }
+
+        function applyGrain(amount) {
+            const imageData = editCtx.getImageData(0, 0, editCanvas.width, editCanvas.height);
+            const data = imageData.data;
+            
+            for (let i = 0; i < data.length; i += 4) {
+                const noise = (Math.random() - 0.5) * amount * 2;
+                data[i] = Math.max(0, Math.min(255, data[i] + noise));
+                data[i + 1] = Math.max(0, Math.min(255, data[i + 1] + noise));
+                data[i + 2] = Math.max(0, Math.min(255, data[i + 2] + noise));
+            }
+            
+            editCtx.putImageData(imageData, 0, 0);
+        }
+
+        function resetEditEffects() {
+            editEffects = { blur: 0, sharpen: 0, denoise: 0, grain: 0, vignette: 0 };
+            
+            ['blur', 'sharpen', 'denoise', 'grain', 'vignette'].forEach(type => {
+                const slider = document.getElementById(`edit-${type}-slider`);
+                const valueEl = document.getElementById(`edit-${type}-value`);
+                if (slider) slider.value = 0;
+                if (valueEl) valueEl.textContent = '0';
+            });
+        }
+
+        // Drawing Tools
+        function selectDrawTool(tool) {
+            currentDrawTool = tool;
+            
+            // Update tool button states
+            document.querySelectorAll('.edit-tool-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            document.getElementById(`tool-${tool}`)?.classList.add('active');
+            
+            // Show/hide settings panels
+            document.getElementById('brush-settings').style.display = 
+                (tool === 'brush' || tool === 'eraser') ? 'block' : 'none';
+            document.getElementById('text-settings').style.display = 
+                tool === 'text' ? 'block' : 'none';
+            
+            // Update cursor
+            if (editCanvas) {
+                if (tool === 'brush' || tool === 'eraser') {
+                    editCanvas.style.cursor = 'crosshair';
+                } else if (tool === 'text') {
+                    editCanvas.style.cursor = 'text';
+                } else {
+                    editCanvas.style.cursor = 'crosshair';
+                }
+            }
+        }
+
+        function updateBrushSize() {
+            const slider = document.getElementById('brush-size-slider');
+            const valueEl = document.getElementById('brush-size-value');
+            const dot = document.getElementById('brush-size-dot');
+            
+            if (slider) {
+                brushSettings.size = parseInt(slider.value);
+                if (valueEl) valueEl.textContent = slider.value;
+                if (dot) {
+                    const size = Math.min(36, Math.max(4, brushSettings.size * 0.8));
+                    dot.style.width = size + 'px';
+                    dot.style.height = size + 'px';
+                }
+            }
+        }
+
+        function updateBrushOpacity() {
+            const slider = document.getElementById('brush-opacity-slider');
+            const valueEl = document.getElementById('brush-opacity-value');
+            
+            if (slider) {
+                brushSettings.opacity = parseInt(slider.value);
+                if (valueEl) valueEl.textContent = slider.value + '%';
+            }
+        }
+
+        function updateBrushColor() {
+            const colorPicker = document.getElementById('brush-color');
+            const hexInput = document.getElementById('brush-color-hex');
+            
+            if (colorPicker) {
+                brushSettings.color = colorPicker.value;
+                if (hexInput) hexInput.value = colorPicker.value;
+            }
+        }
+
+        function updateBrushColorFromHex() {
+            const hexInput = document.getElementById('brush-color-hex');
+            const colorPicker = document.getElementById('brush-color');
+            
+            if (hexInput && /^#[0-9A-Fa-f]{6}$/.test(hexInput.value)) {
+                brushSettings.color = hexInput.value;
+                if (colorPicker) colorPicker.value = hexInput.value;
+            }
+        }
+
+        function startDrawing(e) {
+            if (!currentDrawTool || !currentEditPanel) return;
+            
+            isDrawing = true;
+            const rect = editCanvas.getBoundingClientRect();
+            lastX = e.clientX - rect.left;
+            lastY = e.clientY - rect.top;
+            drawStartX = lastX;
+            drawStartY = lastY;
+            
+            if (currentDrawTool === 'text') {
+                placeText(lastX, lastY);
+                isDrawing = false;
+            }
+        }
+
+        function draw(e) {
+            if (!isDrawing || !currentDrawTool) return;
+            
+            const rect = editCanvas.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            
+            if (currentDrawTool === 'brush' || currentDrawTool === 'eraser') {
+                drawBrushStroke(x, y);
+            }
+            
+            lastX = x;
+            lastY = y;
+        }
+
+        function drawBrushStroke(x, y) {
+            editCtx.beginPath();
+            editCtx.moveTo(lastX, lastY);
+            editCtx.lineTo(x, y);
+            editCtx.strokeStyle = currentDrawTool === 'eraser' ? '#000000' : brushSettings.color;
+            editCtx.lineWidth = brushSettings.size;
+            editCtx.lineCap = 'round';
+            editCtx.lineJoin = 'round';
+            editCtx.globalAlpha = brushSettings.opacity / 100;
+            
+            if (currentDrawTool === 'eraser') {
+                editCtx.globalCompositeOperation = 'destination-out';
+            } else {
+                editCtx.globalCompositeOperation = 'source-over';
+            }
+            
+            editCtx.stroke();
+            editCtx.globalAlpha = 1;
+            editCtx.globalCompositeOperation = 'source-over';
+        }
+
+        function stopDrawing() {
+            if (isDrawing && currentDrawTool) {
+                if (currentDrawTool === 'line') {
+                    drawLine();
+                } else if (currentDrawTool === 'rect') {
+                    drawRect();
+                } else if (currentDrawTool === 'circle') {
+                    drawCircle();
+                }
+                
+                if (currentDrawTool !== 'text') {
+                    saveEditState();
+                }
+            }
+            isDrawing = false;
+        }
+
+        function drawLine() {
+            const rect = editCanvas.getBoundingClientRect();
+            editCtx.beginPath();
+            editCtx.moveTo(drawStartX, drawStartY);
+            editCtx.lineTo(lastX, lastY);
+            editCtx.strokeStyle = brushSettings.color;
+            editCtx.lineWidth = brushSettings.size;
+            editCtx.lineCap = 'round';
+            editCtx.stroke();
+        }
+
+        function drawRect() {
+            const width = lastX - drawStartX;
+            const height = lastY - drawStartY;
+            editCtx.strokeStyle = brushSettings.color;
+            editCtx.lineWidth = brushSettings.size;
+            editCtx.strokeRect(drawStartX, drawStartY, width, height);
+        }
+
+        function drawCircle() {
+            const radiusX = Math.abs(lastX - drawStartX) / 2;
+            const radiusY = Math.abs(lastY - drawStartY) / 2;
+            const centerX = drawStartX + (lastX - drawStartX) / 2;
+            const centerY = drawStartY + (lastY - drawStartY) / 2;
+            
+            editCtx.beginPath();
+            editCtx.ellipse(centerX, centerY, radiusX, radiusY, 0, 0, Math.PI * 2);
+            editCtx.strokeStyle = brushSettings.color;
+            editCtx.lineWidth = brushSettings.size;
+            editCtx.stroke();
+        }
+
+        function placeText(x, y) {
+            const textInput = document.getElementById('draw-text-input');
+            const fontSelect = document.getElementById('draw-text-font');
+            const sizeSlider = document.getElementById('draw-text-size');
+            const colorPicker = document.getElementById('draw-text-color');
+            
+            const text = textInput?.value || 'Text';
+            const font = fontSelect?.value || "'Bebas Neue', sans-serif";
+            const size = sizeSlider?.value || 48;
+            const color = colorPicker?.value || '#ffffff';
+            
+            editCtx.font = `${size}px ${font}`;
+            editCtx.fillStyle = color;
+            editCtx.fillText(text, x, y);
+            
+            saveEditState();
+            showToast('Text placed!', 'success');
+        }
+
+        function applyAllEdits() {
+            if (!currentEditPanel || !editCanvas) {
+                showToast('No edits to apply', 'error');
+                return;
+            }
+            
+            // Apply current effects permanently
+            applyEditEffects();
+            
+            // Save the final canvas state back to the images object
+            images[currentEditPanel] = editCanvas.toDataURL('image/png');
+            originalImages[currentEditPanel] = images[currentEditPanel];
+            
+            // Update the main preview
+            updatePreview();
+            
+            // Update thumbnail in upload zone
+            const zone = document.getElementById(`${currentEditPanel}-zone`);
+            if (zone) {
+                zone.style.backgroundImage = `url(${images[currentEditPanel]})`;
+                zone.style.backgroundSize = 'cover';
+                zone.style.backgroundPosition = 'center';
+            }
+            
+            // Update badge
+            const badge = document.getElementById(`${currentEditPanel}-badge`);
+            if (badge) {
+                badge.textContent = 'Edited';
+                badge.style.background = 'var(--success)';
+                badge.style.color = 'white';
+            }
+            
+            saveToLocalStorage();
+            showToast(`${currentEditPanel.charAt(0).toUpperCase() + currentEditPanel.slice(1)} edits applied!`, 'success');
+        }
+
+        function resetAllEdits() {
+            if (!currentEditPanel) {
+                showToast('No panel selected', 'error');
+                return;
+            }
+            
+            // Reset to original image
+            if (originalImages[currentEditPanel]) {
+                loadImageToEditCanvas(originalImages[currentEditPanel]);
+            } else if (images[currentEditPanel]) {
+                loadImageToEditCanvas(images[currentEditPanel]);
+            }
+            
+            // Reset all sliders
+            resetEditEffects();
+            
+            // Clear drawing tool selection
+            currentDrawTool = null;
+            document.querySelectorAll('.edit-tool-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            document.getElementById('brush-settings').style.display = 'none';
+            document.getElementById('text-settings').style.display = 'none';
+            
+            showToast('Edits reset', 'info');
+        }
+
+        // Initialize edit canvas when DOM is ready
+        document.addEventListener('DOMContentLoaded', () => {
+            initEditCanvas();
+        });
+
+        // Update edit panel buttons when images change
+        const originalUpdatePreview = updatePreview;
+        updatePreview = function() {
+            originalUpdatePreview();
+            updateEditPanelButtons();
+        };
     </script>
 
     <!-- Crop Modal -->
@@ -4766,6 +6774,78 @@
         <div class="crop-modal-buttons">
             <button class="crop-btn-cancel" onclick="closeCropModal()">Cancel</button>
             <button class="crop-btn-apply" onclick="applyCrop()">Apply Crop</button>
+        </div>
+    </div>
+
+    <!-- Project Manager Modal -->
+    <div class="project-modal" id="project-modal">
+        <div class="project-modal-content">
+            <div class="project-modal-header">
+                <h2 class="project-modal-title">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/>
+                    </svg>
+                    My SteelBook Projects
+                </h2>
+                <button class="project-modal-close" onclick="closeProjectManager()">&times;</button>
+            </div>
+            <div class="project-modal-body">
+                <!-- Save Current Project -->
+                <div class="project-save-section">
+                    <div class="project-save-title">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/>
+                            <polyline points="17 21 17 13 7 13 7 21"/>
+                            <polyline points="7 3 7 8 15 8"/>
+                        </svg>
+                        Save Current Project
+                    </div>
+                    <div class="project-save-row">
+                        <input type="text" id="project-name-input" placeholder="Enter project name (e.g., F1 Movie Cover)">
+                        <button class="project-save-btn" onclick="saveCurrentProject()">💾 Save</button>
+                    </div>
+                </div>
+
+                <!-- Project Library -->
+                <div class="project-library-title">
+                    📚 Saved Projects
+                    <span class="project-count" id="project-count">(0 projects)</span>
+                </div>
+                <div class="project-grid" id="project-grid">
+                    <!-- Projects will be rendered here -->
+                </div>
+                <div class="project-empty" id="project-empty" style="display: none;">
+                    <div class="project-empty-icon">📁</div>
+                    <p class="project-empty-text">No saved projects yet</p>
+                    <p style="font-size: 0.85rem;">Save your current work above to start building your library!</p>
+                </div>
+
+                <!-- Import Section -->
+                <div class="project-import-section">
+                    <div class="project-library-title" style="margin-bottom: 0.75rem;">
+                        📥 Import / Export
+                    </div>
+                    <div class="project-import-row">
+                        <button class="project-import-btn" onclick="document.getElementById('import-project-input').click()">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                                <polyline points="17 8 12 3 7 8"/>
+                                <line x1="12" y1="3" x2="12" y2="15"/>
+                            </svg>
+                            Import .steelbook File
+                            <input type="file" id="import-project-input" accept=".steelbook,.json" style="display: none;" onchange="importProjectFile(this)">
+                        </button>
+                        <button class="project-import-btn" onclick="exportCurrentProject()">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                                <polyline points="7 10 12 15 17 10"/>
+                                <line x1="12" y1="15" x2="12" y2="3"/>
+                            </svg>
+                            Export Current as .steelbook
+                        </button>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </body>
